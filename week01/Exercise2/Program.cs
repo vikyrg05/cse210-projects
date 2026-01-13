@@ -37,14 +37,7 @@ class Program
 
         if (letter == "A")
         {
-            if (lastDigit < 3)
-            {
-                sign = "-";
-            }
-            else
-            {
-                sign = "";
-            }
+            sign = "";
         }
         else if (letter == "F")
         {
@@ -52,9 +45,18 @@ class Program
         }
         else
         {
-            if (lastDigit >= 7) sign = "+";
-            else if (lastDigit < 3)sign = "-";
-            else sign = "";
+            if (lastDigit >= 7) 
+            {
+                sign = "+";
+            }
+            else if (lastDigit < 3)
+            {
+                sign = "-";
+            }
+            else 
+            {
+                sign = "";
+            }
         }
         Console.WriteLine($"Your grade is {letter}{sign}");
 
